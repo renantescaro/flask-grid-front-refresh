@@ -1,0 +1,29 @@
+{% extends "template.html" %}
+{% block conteudo %}
+
+<table class="table table-striped table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Número</th>
+        <th>Hora</th>
+    </tr>
+
+    {% for lista in lista_dados %}
+        <tr>
+            <td>{{ lista.id }}</td>
+            <td>{{ lista.numero }}</td>
+            <td>{{ lista.hora }}</td>
+        </tr>
+    {% endfor %}
+</table>
+
+<script>
+    setTimeout(
+        function(){
+            location.reload()
+        },
+        5000
+    )
+</script>
+
+{% endblock %}
